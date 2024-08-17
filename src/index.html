@@ -1,5 +1,5 @@
 <!doctype html>
-<html data-theme="mocha" class="scroll-smooth">
+<html data-theme="sunset" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,6 +10,12 @@
     <link href="./css/global.css" rel="stylesheet" />
   </head>
   <body>
+    <svg
+      id="fader"
+      class="bg-base-200 top-0 left-0 w-full h-full z-[999999] pointer-events-none"
+    ></svg>
+    <script src="./js/page_fade.js"></script>
+
     <header>
       <nav class="navbar fixed bg-base-100 px-3 sm:px-[8%] z-10">
         <div class="navbar-start">
@@ -55,6 +61,7 @@
         </div>
       </nav>
     </header>
+
     <main class="prose max-w-none">
       <section class="px-[10%] py-10 min-h-[50vh] bg-base-200">
         <h1 class="prose-2xl font-mono mx-[15%] flex flex-col sm:flex-row">
@@ -110,6 +117,7 @@
         </div>
       </section>
     </main>
+
     <footer class="footer footer-center bg-base-200 rounded p-10">
       <nav class="grid grid-flow-col gap-4">
         <a href="/" class="link link-hover">Home</a>
