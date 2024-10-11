@@ -7,7 +7,7 @@ function fadeInPage() {
   fader.classList.add("fade-out");
 }
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   if (!window.AnimationEvent) {
     return;
   }
@@ -22,9 +22,9 @@ document.addEventListener("DOMContentLoaded", function () {
       continue;
     }
 
-    anchors[idx].addEventListener("click", function (event) {
+    anchors[idx].addEventListener("click", (e) => {
       var fader = document.getElementById("fader"),
-        anchor = event.currentTarget;
+        anchor = e.currentTarget;
 
       var listener = function () {
         window.location = anchor.href;
@@ -32,14 +32,14 @@ document.addEventListener("DOMContentLoaded", function () {
       };
       fader.addEventListener("animationend", listener);
 
-      event.preventDefault();
+      e.preventDefault();
       fader.classList.add("fade-in");
     });
   }
 });
 
-window.addEventListener("pageshow", function (event) {
-  if (!event.persisted) {
+window.addEventListener("pageshow", (e) => {
+  if (!e.persisted) {
     return;
   }
 
