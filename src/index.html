@@ -19,7 +19,7 @@
 	<body class="min-h-screen flex flex-col">
 		<svg
 			id="fader"
-			class="bg-base-200 top-0 left-0 w-full h-full z-[999999] pointer-events-none"
+			class="bg-base-200 top-0 left-0 w-full h-full z-999999 pointer-events-none"
 		></svg>
 		<script src="./js/page_fade.js"></script>
 
@@ -30,7 +30,7 @@
 						<img
 							alt="Reaper Kid"
 							src="./img/DevReaper0.png"
-							class="w-5 mask mask-squircle"
+							class="max-w-5 mask mask-squircle"
 						>
 						DevReaper0
 					</a>
@@ -38,27 +38,27 @@
 				<div class="navbar-end">
 					<div class="hidden sm:flex">
 						<ul class="menu menu-horizontal flex-nowrap px-0 gap-1">
-							<li><a href="/" class="px-3.5 active">Home</a></li>
-							<li><a href="projects.html" class="px-3.5">Projects</a></li>
-							<li><a href="blog.html" class="px-3.5">Blog</a></li>
-							<li><a href="contact.html" class="px-3.5">Contact</a></li>
+							<li><a href="/" class="px-3.5 py-2 menu-active">Home</a></li>
+							<li><a href="projects.html" class="px-3.5 py-2">Projects</a></li>
+							<li><a href="blog.html" class="px-3.5 py-2">Blog</a></li>
+							<li><a href="contact.html" class="px-3.5 py-2">Contact</a></li>
 						</ul>
 					</div>
 					<div class="dropdown dropdown-end">
-						<button type="button" class="btn-menu sm:hidden">
+						<button type="button" class="btn-menu-icon max-w-9 sm:hidden!">
 							<i data-lucide="menu" class="text-lg" aria-hidden="true"></i>
 							<span class="sr-only">Open menu</span>
 						</button>
 						<ul
-							class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+							class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
 						>
-							<li><a href="/" class="active">Home</a></li>
+							<li><a href="/" class="menu-active">Home</a></li>
 							<li><a href="projects.html">Projects</a></li>
 							<li><a href="blog.html">Blog</a></li>
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
 					</div>
-					<label class="btn-menu ml-1 swap swap-rotate">
+					<label class="btn-menu-icon max-w-9 ml-1 swap swap-rotate">
 						<!-- This hidden checkbox controls the state -->
 						<input type="checkbox" class="theme-controller">
 
@@ -99,27 +99,10 @@
 				class="px-[10%] pb-16 md:pb-24 md:min-h-[40vh] lg:min-h-[50vh]"
 			>
 				<div class="mx-auto max-w-7xl px-4 pb-10">
-					<h2>Currently Relevant to Me</h2>
+					<h2>Technology</h2>
+					<!-- TODO: Add some text here? -->
 					<div class="w-full">
 						<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-							<div class="card bg-base-200 shadow-xl">
-								<figure class="not-prose h-48">
-									<svg class="pt-10 px-10 h-fit max-w-[90%]">
-										<title>Golang logo</title>
-										<use
-											href="./img/golang.svg#Layer_1"
-											class="fill-[#00ACD7]"
-										/>
-									</svg>
-								</figure>
-								<div class="card-body">
-									<h3 class="card-title my-0">Golang</h3>
-									<p>
-										My current favorite programming language is Go! I use it for
-										most of my projects and love its simplicity and performance.
-									</p>
-								</div>
-							</div>
 							<div class="card bg-base-200 shadow-xl">
 								<figure class="not-prose h-48">
 									<svg class="pt-5 px-5 block h-fit max-w-[90%]">
@@ -131,10 +114,72 @@
 									</svg>
 								</figure>
 								<div class="card-body">
-									<h3 class="card-title my-0">Arch Linux</h3>
+									<h3 class="card-title my-0!">Arch Linux</h3>
 									<p>
 										I run Linux on my personal computer, with Arch being my
 										distro of choice.
+									</p>
+								</div>
+							</div>
+							<div class="card bg-base-200 shadow-xl">
+								<figure class="not-prose h-48">
+									<svg class="pt-5 px-5 block h-fit max-w-[90%]">
+										<title>Neovim logo</title>
+										<use
+											href="./img/neovim.svg#graphic"
+											class="fill-[#444444] dark:fill-white"
+										/>
+									</svg>
+								</figure>
+								<div class="card-body">
+									<h3 class="card-title my-0!">Neovim</h3>
+									<p>
+										My primary editor is Neovim. I'm still gradually learning
+										the Vim bindings, but I love its speed and flexibility.
+									</p>
+								</div>
+							</div>
+							<div class="card bg-base-200 shadow-xl">
+								<figure class="not-prose h-48">
+									<svg class="pt-10 px-10 h-fit max-w-[90%]">
+										<title>Golang logo</title>
+										<use
+											href="./img/golang.svg#Layer_1"
+											class="fill-[#00ACD7]"
+										/>
+									</svg>
+								</figure>
+								<div class="card-body">
+									<h3 class="card-title my-0!">Golang</h3>
+									<p>
+										My current favorite programming language is Go! I use it for
+										most of my projects and love its simplicity and performance.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--<div class="mx-auto max-w-7xl px-4 pb-10">
+					<h2>Music</h2>
+					< !-- TODO: Add some text here? -- >
+					<div class="w-full">
+						<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+							<div class="card bg-base-200 shadow-xl">
+								<figure class="not-prose h-48">
+									<svg class="pt-10 pb-4 px-12 block h-fit max-w-[90%]">
+										<title>Ado's logo</title>
+										<use
+											href="./img/ado.svg#graphic"
+											class="fill-black dark:fill-white"
+										/>
+									</svg>
+								</figure>
+								<div class="card-body">
+									<h3 class="card-title my-0!">Ado</h3>
+									<p>
+										Lately, I've been listening to a lot of Ado's music, which
+										has led me to explore more J-Pop in general.
 									</p>
 								</div>
 							</div>
@@ -144,25 +189,45 @@
 										<title>Ado's logo</title>
 										<use
 											href="./img/ado.svg#graphic"
-											class="fill-[#000] dark:fill-[#fff]"
+											class="fill-black dark:fill-white"
 										/>
 									</svg>
 								</figure>
 								<div class="card-body">
-									<h3 class="card-title my-0">Ado</h3>
+									<h3 class="card-title my-0!">TODO</h3>
 									<p>
-										Lately, I've been listening to a lot of Ado's music, which
-										has led me to explore more J-Pop in general.
+										This card is a temporary placeholder that will be updated in
+										the future.
+									</p>
+								</div>
+							</div>
+							<div class="card bg-base-200 shadow-xl">
+								<figure class="not-prose h-48">
+									<svg class="pt-10 pb-4 px-12 block h-fit max-w-[90%]">
+										<title>Ado's logo</title>
+										<use
+											href="./img/ado.svg#graphic"
+											class="fill-black dark:fill-white"
+										/>
+									</svg>
+								</figure>
+								<div class="card-body">
+									<h3 class="card-title my-0!">TODO</h3>
+									<p>
+										This card is a temporary placeholder that will be updated in
+										the future.
 									</p>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
+				</div>-->
 			</section>
 		</main>
 
-		<footer class="footer footer-center bg-base-200 rounded p-10">
+		<footer
+			class="footer footer-horizontal footer-center bg-base-200 rounded p-10"
+		>
 			<nav class="grid grid-flow-col gap-4">
 				<a href="/" class="link link-hover">Home</a>
 				<a href="projects.html" class="link link-hover">Projects</a>

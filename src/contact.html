@@ -19,7 +19,7 @@
 	<body class="min-h-screen flex flex-col">
 		<svg
 			id="fader"
-			class="bg-base-200 top-0 left-0 w-full h-full z-[999999] pointer-events-none"
+			class="bg-base-200 top-0 left-0 w-full h-full z-999999 pointer-events-none"
 		></svg>
 		<script src="./js/page_fade.js"></script>
 
@@ -30,7 +30,7 @@
 						<img
 							alt="Reaper Kid"
 							src="./img/DevReaper0.png"
-							class="w-5 mask mask-squircle"
+							class="max-w-5 mask mask-squircle"
 						>
 						DevReaper0
 					</a>
@@ -38,27 +38,31 @@
 				<div class="navbar-end">
 					<div class="hidden sm:flex">
 						<ul class="menu menu-horizontal flex-nowrap px-0 gap-1">
-							<li><a href="/" class="px-3.5">Home</a></li>
-							<li><a href="projects.html" class="px-3.5">Projects</a></li>
-							<li><a href="blog.html" class="px-3.5">Blog</a></li>
-							<li><a href="contact.html" class="px-3.5 active">Contact</a></li>
+							<li><a href="/" class="px-3.5 py-2">Home</a></li>
+							<li><a href="projects.html" class="px-3.5 py-2">Projects</a></li>
+							<li><a href="blog.html" class="px-3.5 py-2">Blog</a></li>
+							<li>
+								<a href="contact.html" class="px-3.5 py-2 menu-active"
+									>Contact</a
+								>
+							</li>
 						</ul>
 					</div>
 					<div class="dropdown dropdown-end">
-						<button type="button" class="btn-menu sm:hidden">
+						<button type="button" class="btn-menu-icon max-w-9 sm:hidden!">
 							<i data-lucide="menu" class="text-lg" aria-hidden="true"></i>
 							<span class="sr-only">Open menu</span>
 						</button>
 						<ul
-							class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+							class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
 						>
 							<li><a href="/">Home</a></li>
 							<li><a href="projects.html">Projects</a></li>
 							<li><a href="blog.html">Blog</a></li>
-							<li><a href="contact.html" class="active">Contact</a></li>
+							<li><a href="contact.html" class="menu-active">Contact</a></li>
 						</ul>
 					</div>
-					<label class="btn-menu ml-1 swap swap-rotate">
+					<label class="btn-menu-icon max-w-9 ml-1 swap swap-rotate">
 						<!-- This hidden checkbox controls the state -->
 						<input type="checkbox" class="theme-controller">
 
@@ -101,7 +105,9 @@
 			</section>
 		</main>
 
-		<footer class="footer footer-center bg-base-200 rounded p-10">
+		<footer
+			class="footer footer-horizontal footer-center bg-base-200 rounded p-10"
+		>
 			<nav class="grid grid-flow-col gap-4">
 				<a href="/" class="link link-hover">Home</a>
 				<a href="projects.html" class="link link-hover">Projects</a>

@@ -18,11 +18,11 @@
 	},
 	"homepage": "https://github.com/DevReaper0/devreaper0.github.io#readme",
 	"devDependencies": {
-		"@catppuccin/daisyui": "^1.1.1",
-		"@tailwindcss/typography": "^0.5.13",
-		"daisyui": "^4.12.8",
+		"@tailwindcss/postcss": "^4.3.3",
+		"@tailwindcss/typography": "^0.5.20",
+		"daisyui": "^5.7.47",
 		"parcel": "^2.16.4",
-		"postcss": "^8.4.38",
-		"tailwindcss": "^3.4.4"
+		"postcss": "^8.5.28",
+		"tailwindcss": "^4.3.3"
 	}
 }

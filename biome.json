@@ -20,7 +20,14 @@
 	},
 	"html": {
 		"experimentalFullSupportEnabled": true,
-		"formatter": { "enabled": true }
+		"formatter": {
+			"enabled": true
+		}
+	},
+	"css": {
+		"parser": {
+			"tailwindDirectives": true
+		}
 	},
 	"javascript": {
 		"formatter": {
